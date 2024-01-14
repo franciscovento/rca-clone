@@ -38,6 +38,11 @@
     transform: translate(-50%, -50%);
     transition: all 0.3s ease-out;
   }
+  @media (max-width: 768px) {
+    .cursor {
+      display: none;
+    }
+  }
 </style>
 <script>
   const cursor = document.querySelector('.cursor') as HTMLDivElement;
