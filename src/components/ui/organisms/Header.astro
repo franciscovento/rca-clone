@@ -1,0 +1,144 @@
+---
+import Logo from '../atoms/Logo.astro';
+---
+
+<header class="header">
+  <Logo />
+  <div class="header__right">
+    <div class="header__listen">
+      <button class="header__listen-button">
+        <div class="header__listen-barContainer">
+          <span class="header__listen-bar-1"></span>
+          <span class="header__listen-bar-2"></span>
+          <span class="header__listen-bar-3"></span>
+        </div>
+        <span class="header__listen-text">Listen</span>
+      </button>
+    </div>
+    <div class="header__menu">
+      <button> MENU</button>
+    </div>
+  </div>
+</header>
+<style>
+  .header {
+    z-index: 99;
+    animation: fadeDown 0.5s ease-in-out;
+    padding: 0 0 0 3vw;
+    color: white;
+    height: 80px;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .header__right {
+    display: flex;
+  }
+
+  .header__listen,
+  .header__menu {
+    margin: auto;
+    height: 80px;
+    padding: 0 3vw;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+  }
+
+  .header__listen {
+    color: #f09aaf;
+    font-size: 16px;
+  }
+  .header__listen-text {
+    line-height: 24px;
+  }
+
+  .header__listen-button {
+    display: flex;
+    gap: 10px;
+  }
+
+  .header__listen-barContainer {
+    display: flex;
+    gap: 4px;
+    height: 17px;
+    width: 17px;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+  }
+  .header__listen-bar-1 {
+    width: 3px;
+    background-color: #f09aaf;
+    animation: growBar 0.5s infinite alternate;
+    display: block;
+  }
+  .header__listen-bar-2 {
+    width: 3px;
+    background-color: #f09aaf;
+    animation: growBar_2 0.5s infinite alternate;
+    animation-delay: 0.2s;
+    display: block;
+  }
+
+  .header__listen-bar-3 {
+    width: 3px;
+    background-color: #f09aaf;
+    animation: growBar_3 0.5s infinite alternate;
+    animation-delay: 0.3s;
+    display: block;
+  }
+
+  @keyframes growBar {
+    0% {
+      height: 0px;
+    }
+    100% {
+      height: 16px;
+    }
+  }
+
+  @keyframes growBar_2 {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 10px;
+    }
+  }
+
+  @keyframes growBar_3 {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 14px;
+    }
+  }
+
+  @keyframes fadeDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+  }
+</style>

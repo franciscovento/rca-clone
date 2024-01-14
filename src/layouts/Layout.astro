@@ -1,0 +1,29 @@
+---
+import '../components/styles/ResetCss.astro';
+import '../components/styles/Normalize.astro';
+import '../components/styles/GlobalStyles.astro';
+import Header from '../components/ui/organisms/Header.astro';
+import Cursor from '../components/ui/atoms/Cursor.astro';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap&family=Rock+Salt&display=swap&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <footer>Footer</footer>
+    <Cursor />
+  </body>
+</html>

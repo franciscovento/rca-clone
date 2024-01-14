@@ -1,0 +1,62 @@
+---
+
+---
+
+<div class="cursor-container">
+  <div class="cursor">
+    <div class="pointer"></div>
+  </div>
+</div>
+<style>
+  .cursor-container {
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-sizing: border-box;
+    top: 0;
+    mix-blend-mode: difference;
+  }
+  .cursor {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    width: 114px;
+    height: 114px;
+  }
+  .pointer {
+    background-color: #fcfdf8;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-out;
+  }
+</style>
+<script>
+  const cursor = document.querySelector('.cursor') as HTMLDivElement;
+  const pointer = document.querySelector('.pointer') as HTMLDivElement;
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.transform = `translate(-50%, -50%) translate(${e.clientX}px, ${e.clientY}px)`;
+  });
+
+  const interactiveElements = document.querySelectorAll('a, button');
+
+  interactiveElements.forEach((element) => {
+    element.addEventListener('mouseover', () => {
+      pointer.style.width = '48px';
+      pointer.style.height = '48px';
+    });
+
+    element.addEventListener('mouseout', () => {
+      pointer.style.width = '18px';
+      pointer.style.height = '18px';
+    });
+  });
+</script>

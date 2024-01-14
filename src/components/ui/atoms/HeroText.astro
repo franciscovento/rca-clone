@@ -1,0 +1,75 @@
+---
+const first_word = 'DEFY'.split('');
+const second_word = 'LABELS.'.split('');
+---
+
+<div class="title">
+  <div>
+    {
+      first_word.map((letter) => {
+        return <span class="title__letter">{letter}</span>;
+      })
+    }
+  </div>
+  <div>
+    {
+      second_word.map((letter) => {
+        return <span class="title__letter">{letter}</span>;
+      })
+    }
+  </div>
+</div>
+<style>
+  .title {
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+    color: white;
+    text-wrap: wrap;
+    text-align: center;
+    word-break: break-all;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+    column-gap: 40px;
+  }
+  .title__letter {
+    font-size: 80px;
+    /* font-size: clamp(4.5rem, 0.39999999999999947rem + 17.5vw, 20rem); */
+    transition: all 0.3s ease;
+  }
+  .title__letter:hover {
+    font-family: 'Rock Salt', cursive;
+  }
+
+  @media (min-width: 768px) {
+    .title__letter {
+      font-size: 180px;
+    }
+  }
+  @media (min-width: 1900px) {
+    .title__letter {
+      font-size: 300px;
+    }
+  }
+</style>
+<script>
+  // const text = 'DEFY LABELS.';
+  // const textArray = text.split('');
+  // const span = document.querySelector('.title') as HTMLSpanElement;
+  // span.textContent = '';
+  // for (let i = 0; i < textArray.length; i++) {
+  //   span.innerHTML += '<span class="title__letter">' + textArray[i] + '</span>';
+  // }
+  // const letters = document.querySelectorAll(
+  //   '.title__letter'
+  // ) as unknown as HTMLSpanElement[];
+  // letters.forEach((letter, index) => {
+  //   letter.addEventListener('mouseenter', () => {
+  //     letter.style.fontFamily = 'Rock Salt';
+  //   });
+  //   letter.addEventListener('mouseleave', () => {
+  //     letter.style.fontFamily = 'inherit';
+  //   });
+  // });
+</script>

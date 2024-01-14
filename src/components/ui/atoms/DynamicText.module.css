@@ -1,0 +1,13 @@
+.dynamicText {
+  font-family: 'Anton', sans-serif;
+  font-size: 130px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .dynamicText {
+    font-size: 60px;
+  }
+}

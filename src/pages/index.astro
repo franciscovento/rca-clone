@@ -1,0 +1,107 @@
+---
+import Button from '../components/ui/atoms/Button.astro';
+import DynamicText from '../components/ui/atoms/DynamicText';
+import HeroText from '../components/ui/atoms/HeroText.astro';
+import ImagesSlider from '../components/ui/molecules/ImagesSlider.astro';
+import Layout from '../layouts/Layout.astro';
+import GridArea from '../components/ui/atoms/GridArea.astro';
+const words = [
+  'Partners in creation',
+  'Advocates for changue',
+  'The next evolution',
+  'Lovers of Music',
+];
+---
+
+<Layout>
+  <section class="hero">
+    <HeroText />
+  </section>
+  <section>
+    <div class="slider-wrapper">
+      <ImagesSlider />
+    </div>
+    <div class="social_impact app-container">
+      <div>
+        <Button>Social Impact</Button>
+      </div>
+      <div>
+        <Button>News & Events</Button>
+      </div>
+    </div>
+  </section>
+  <section class="section-3">
+    <span class="section-3--tagline"
+      >We are amore than a redord label. We are</span
+    >
+    <DynamicText client:load={true} words={words} tag="h1" />
+  </section>
+  <section class="section-4">
+    <GridArea />
+  </section>
+  <div class="temporal"></div>
+</Layout>
+<style>
+  .hero {
+    overflow: hidden;
+    background-color: #0f0e0e;
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slider-wrapper {
+    margin-top: -140px;
+    overflow: hidden;
+  }
+
+  .social_impact {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    gap: 10px;
+  }
+
+  .section-3 {
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+  }
+
+  .section-3--tagline {
+    font-family: sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .section-4 {
+    padding-top: 150px;
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      height: 120vh;
+    }
+    .slider-wrapper {
+      margin-top: -220px;
+    }
+  }
+
+  @media (min-width: 1900px) {
+    .slider-wrapper {
+      margin-top: -280px;
+    }
+  }
+  .temporal {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+  }
+</style>

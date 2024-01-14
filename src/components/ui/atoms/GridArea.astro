@@ -1,0 +1,175 @@
+---
+
+---
+
+<div class="parent">
+  <div class="div1">
+    <div class="spacer"></div>
+    <div class="div1--img">
+      <img
+        src="https://cdn.smehost.net/rcarecordscom-usrcaprod/wp-content/uploads/2023/06/MIGUEL-LOOK5-22-2-3.jpg"
+      />
+    </div>
+    <div class="div1--container">
+      <h2 class="div1--title">
+        WE’RE FIERCE IN OUR DEDICATION TO CREATIVE SPIRITS.
+      </h2>
+      <div class="div1--p">
+        <p>
+          Our artists redefine genres. Our artists define generations. Our
+          artists change the world.
+        </p>
+        <p>
+          We are the home of some of the most iconic artists of all time - the
+          dreamers, the believers, the truth-tellers, the ground shakers.
+        </p>
+        <p>
+          Powered by our legacy, it’s time to build a new generation of
+          believers, straight-shooters, and storytellers.
+        </p>
+        <div>
+          <button class="div1--button">View all artists</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div2">
+    <div class="img1">
+      <img
+        src="https://cdn.smehost.net/rcarecordscom-usrcaprod/wp-content/uploads/2023/06/MIGUEL-LOOK5-22-2-3.jpg"
+        alt=""
+      />
+    </div>
+    <div class="img2">
+      <div class="img2--left">
+        <img
+          src="https://cdn.smehost.net/rcarecordscom-usrcaprod/wp-content/uploads/2023/06/230202_Kesha_x_Perron-Roetinger_318983_V2_QC.jpg"
+          alt=""
+        />
+      </div>
+      <div class="img2--right">
+        <img
+          src="https://cdn.smehost.net/rcarecordscom-usrcaprod/wp-content/uploads/2023/03/VM.png"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .spacer {
+    width: 100%;
+    height: 400px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .parent {
+    position: relative;
+  }
+
+  .div1 {
+    z-index: 10;
+    width: 50vw;
+    position: relative;
+  }
+  .div1--container {
+    box-sizing: border-box;
+    height: 100%;
+    background: #ffa8bd;
+    width: calc(100% + 100px);
+    padding: 120px 150px 120px 3vw;
+  }
+
+  .div1--title {
+    font-size: 54px;
+    margin-bottom: 50px;
+  }
+
+  .div1--p {
+    font-size: 30px;
+    line-height: 42px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  .div1--button {
+    background: #000;
+    display: inline-block;
+    margin-top: 40px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 1.2;
+    padding: 4px 40px;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  .div1--button:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  .div2 {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    width: 54vw;
+    height: 100%;
+    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+  }
+  .img1 {
+    height: 60%;
+  }
+  .img2 {
+    height: 40%;
+    display: flex;
+  }
+  .img2--left {
+    flex: 1;
+  }
+
+  .img2--right {
+    flex: 1;
+  }
+
+  .div1--img {
+    display: none;
+  }
+
+  @media (max-width: 940px) {
+    .spacer {
+      height: 0;
+    }
+    .div1--img {
+      display: flex;
+      justify-content: end;
+    }
+
+    .div1--img img {
+      width: 339px;
+      height: 221px;
+    }
+    .div1 {
+      width: 100%;
+      overflow: hidden;
+    }
+    .div2 {
+      position: static;
+      width: 100%;
+    }
+    .img1 {
+      display: none;
+    }
+    .img2 {
+      height: 240px;
+    }
+  }
+</style>
